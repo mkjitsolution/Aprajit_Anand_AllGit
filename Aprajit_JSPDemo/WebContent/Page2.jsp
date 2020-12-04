@@ -11,7 +11,7 @@
 </head>
 <body>
 	<%
-		String name = "Aprajit"; // fetch from database
+	
 
 	DatabaseClass dbclass = new DatabaseClass();
 	List<String> list = new ArrayList();
@@ -22,15 +22,14 @@
 		out.print(e);
 	}
 	%>
-	<h1>
-		Welcome
-		<%=name%>
-		Portal Auckland
-	</h1>
+	
+	<jsp:include page="Header.jsp"/>
+	
+	
 	<form action="CategoryServlet" method="post">
 		Choose your course <br/>
 		
-				<select>
+				<select name="course">
 			<%
 				for (String course : list) {
 			%>
